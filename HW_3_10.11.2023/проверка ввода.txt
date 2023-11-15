@@ -1,0 +1,32 @@
+
+# Домашнее задание 04. Логические выражения и операторы
+#
+# Задание №4.
+#
+# Напишите программу, в которой я ввожу два целостных числа,
+# и если первое число больше второго, то программа выведет true, иначе false.
+
+check_number = '0123456789'
+result = False
+
+#while result == False:
+
+number1 = input("Введите первое целое число: ")
+i = 0
+while i < len(number1):
+        j = 0
+        while j < 10:
+            print(f' {i}-й цикл по i, {j}-й цикл по j: сравниваем {number1[i]} с {check_number[j]}')
+            if number1[i] == check_number[j]:
+                result = True
+                print(f' {result} - Есть совпадение !!!')
+                break
+            else:
+                result = False
+            j += 1
+        i += 1
+
+if result == False:
+        print('Ошибка ввода !!!')
+
+# print('Всё ок - идём дальше !!!')
